@@ -9,7 +9,16 @@ module.exports = {
     "./error.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        'primary': '#FFE926',
+        'secondary': '#202127',
+        'support': '#F3F3F3',
+      },
+      boxShadow: {
+        'regular': '0px 5px 0px 0px #BDBDBD',
+      }
+    }
   },
   plugins: [],
 }

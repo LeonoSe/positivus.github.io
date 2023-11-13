@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "common/colors";
+@import "common/fonts";
+
+body {
+  background-color: $secondary;
+  color: $support;
+  font-family: $font-family-main;
+}
