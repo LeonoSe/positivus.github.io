@@ -8,4 +8,8 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  app: {
+    baseURL: '/positivus.github.io/',
+    buildAssetsDir: 'assets',
+  }
 })
