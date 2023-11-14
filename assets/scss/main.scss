@@ -5,8 +5,16 @@
 @import "common/colors";
 @import "common/fonts";
 
-body {
+@import "components/accordion";
+
+html {
   background-color: $secondary;
   color: $support;
   font-family: $font-family-main;
+  overflow-x: hidden;
+}
+
+.wrapper {
+  max-width: 1240px;
+  margin: 0 auto;
 }
