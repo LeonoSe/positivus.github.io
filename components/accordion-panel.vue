@@ -12,7 +12,7 @@
 
 <template>
   <div class="flex items-center w-full" :class="showPanel && 'pb-8'" @click.prevent="togglePanel">
-    <p class="text-3xl pr-4">0{{ index + 1 }}</p>
+    <p class="text-3xl pr-4 lg:lg:text-6xl">0{{ index + 1 }}</p>
     <h4 class="text-xl">{{ title }}</h4>
     <span class="ml-auto accordion-icon"></span>
   </div>

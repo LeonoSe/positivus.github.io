@@ -17,6 +17,7 @@ module.exports = {
       },
       boxShadow: {
         'regular': '0px 5px 0px 0px #BDBDBD',
+        'big': '-10px 10px 0px 0px rgba(189, 189, 189, 1)'
       }
     }
   },
