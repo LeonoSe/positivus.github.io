@@ -1,22 +1,22 @@
 <template>
   <div class="wrapper">
-    <header class="flex justify-between p-5 md:items-center">
+    <header class="flex justify-between p-6 md:items-center">
       <img src="~/assets/img/logo.svg">
       <nav class="hidden md:block md:ml-auto">
         <ul class="md:flex">
-          <li class="mr-8"><a href="#">Lessons</a></li>
+          <li class="mr-8"><NuxtLink to="lessons">Lessons</NuxtLink></li>
           <li class="mr-8"><a href="#">Membership</a></li>
           <li class="mr-8"><a href="#">Rus</a></li>
         </ul>
       </nav>
       <NuxtLink class="text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular md:text-xl md:px-6" href="#">Try it</NuxtLink>
     </header>
-    <main class="p-5">
+    <main class="p-6">
       <section class="flex flex-col mb-8 md:flex-row md:relative md:min-h-[345px] md:items-center lg:min-h-[640px] lg:mb-20">
         <div class="md:w-1/2 md:flex md:flex-col md:items-start lg:w-3/5">
           <h1 class="font-bold text-4xl lg:text-6xl">хeй, это гид по платежным системам!</h1>
           <p class="font-medium text-4xl md:mb-5 lg:text-6xl">узнай больше о системах от инженеров, которые их проектируют 🔥</p>
-          <NuxtLink class="w-auto text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular hidden md:block md:text-xl" href="#">Открыть гид</NuxtLink>
+          <NuxtLink class="w-auto text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular hidden md:block md:text-xl" href="lessons">Открыть гид</NuxtLink>
         </div>
         <img class="block pt-8 pb-4 md:absolute md:top-0 md:left-1/2 md:w-[600px] md:p-0 lg:min-w-[1200px] lg:left-[60%]" src="~/assets/img/system.png">
         <p class="pb-4 md:hidden">Гид позволяет выбрать и исследовать различные темы и направления. А также покажет как разные решения пересекаются и используются во многих продуктах</p>
@@ -30,7 +30,7 @@
         <ul class="w-full flex flex-col md:hidden">
           <li v-for="lesson in lessons.slice(0, 3)" class="p-8 mb-4 bg-white rounded-2xl shadow-regular flex flex-col items-start">
             <h3 class="px-2 bg-black rounded-lg mb-4 text-2xl">{{ lesson.title }}</h3>
-            <NuxtLink class="text-black" href="{{ lesson.link }}#"><img src="~/assets/img/arrow.svg"></NuxtLink>
+            <NuxtLink class="text-black" href="{{ lesson.link }}"><img src="~/assets/img/arrow.svg"></NuxtLink>
           </li>
         </ul>
         <div class="hidden w-full md:block">

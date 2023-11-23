@@ -1,16 +1,20 @@
 <template>
   <div class="flex flex-col min-h-screen">
-    <header class="p-6 flex justify-between">
-      <img src="~/assets/img/logo.svg">
-      <button class="navbar-burger flex items-center text-white w-[40px] h-[40px]">
-        <svg class="block h-full w-full fill-current lg:hidden" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-          <title>Mobile menu</title>
-          <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
-        </svg>
-      </button>
-      <NuxtLink class="text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular hidden lg:block" href="#">To the guide</NuxtLink>
-    </header>
-    <div class="flex flex-col flex-grow lg:flex-row">
+    <div class="wrapper w-full">
+      <header class="p-6 flex justify-between w-full box-border md:items-center">
+        <NuxtLink to="/">
+          <img src="~/assets/img/logo.svg">
+        </NuxtLink>
+        <button class="navbar-burger flex items-center text-white w-[40px] h-[40px] lg:hidden">
+          <svg class="block h-full w-full fill-current lg:hidden" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <title>Mobile menu</title>
+            <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+          </svg>
+        </button>
+        <NuxtLink class="text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular hidden lg:block" href="#">To the guide</NuxtLink>
+      </header>
+    </div>
+    <div class="flex flex-col flex-grow lg:flex-row wrapper w-full">
       <nav class="p-6">
         <ul>
           <li v-for="item in navigation">
