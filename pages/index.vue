@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <header class="flex justify-between p-5 md:items-center">
-      <img src="./assets/img/logo.svg">
+      <img src="~/assets/img/logo.svg">
       <nav class="hidden md:block md:ml-auto">
         <ul class="md:flex">
           <li class="mr-8"><a href="#">Lessons</a></li>
@@ -18,7 +18,7 @@
           <p class="font-medium text-4xl md:mb-5 lg:text-6xl">узнай больше о системах от инженеров, которые их проектируют 🔥</p>
           <NuxtLink class="w-auto text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular hidden md:block md:text-xl" href="#">Открыть гид</NuxtLink>
         </div>
-        <img class="block pt-8 pb-4 md:absolute md:top-0 md:left-1/2 md:w-[600px] md:p-0 lg:min-w-[1200px] lg:left-[60%]" src="./assets/img/system.png">
+        <img class="block pt-8 pb-4 md:absolute md:top-0 md:left-1/2 md:w-[600px] md:p-0 lg:min-w-[1200px] lg:left-[60%]" src="~/assets/img/system.png">
         <p class="pb-4 md:hidden">Гид позволяет выбрать и исследовать различные темы и направления. А также покажет как разные решения пересекаются и используются во многих продуктах</p>
         <NuxtLink class="w-full text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular md:hidden" href="#">Открыть гид</NuxtLink>
       </section>
@@ -30,7 +30,7 @@
         <ul class="w-full flex flex-col md:hidden">
           <li v-for="lesson in lessons.slice(0, 3)" class="p-8 mb-4 bg-white rounded-2xl shadow-regular flex flex-col items-start">
             <h3 class="px-2 bg-black rounded-lg mb-4 text-2xl">{{ lesson.title }}</h3>
-            <NuxtLink class="text-black" href="{{ lesson.link }}#"><img src="./assets/img/arrow.svg"></NuxtLink>
+            <NuxtLink class="text-black" href="{{ lesson.link }}#"><img src="~/assets/img/arrow.svg"></NuxtLink>
           </li>
         </ul>
         <div class="hidden w-full md:block">
@@ -42,7 +42,7 @@
             <SwiperSlide v-for="slide in lessons">
               <div class="w-full h-full min-h-[420px] p-8 bg-white rounded-2xl shadow-regular flex flex-col items-start">
                 <h3 class="px-2 bg-black rounded-lg mb-4 text-2xl">{{ slide.title }}</h3>
-                <NuxtLink class="flex text-black items-center mt-auto" href="{{ slide.link }}#"><img class="mr-4" src="./assets/img/arrow.svg">Открыть урок</NuxtLink>
+                <NuxtLink class="flex text-black items-center mt-auto" :href="slide.link"><img class="mr-4" src="~/assets/img/arrow.svg">Открыть урок</NuxtLink>
               </div>
             </SwiperSlide>
           </Swiper>
@@ -55,7 +55,7 @@
           <p class="text-s mb-8">Гид позволяет выбрать и исследовать различные темы и направления. А также покажет как разные решения пересекаются и используются во многих продуктах</p>
           <NuxtLink class="text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular" href="#">Открыть гид</NuxtLink>
         </div>
-        <img class="block w-1/2" src="./assets/img/system-guide.png">
+        <img class="block w-1/2" src="~/assets/img/system-guide.png">
         </section>
       <section class="pt-5 mb-8 flex flex-col items-center md:items-start lg:mb-20">
         <h2 class="bg-primary w-auto text-center text-black font-bold rounded-lg text-4xl p-1 mb-4 lg:text-6xl">5+ реальных продуктов</h2>
@@ -66,7 +66,7 @@
               <ul class="list-disc pl-4 mb-4">
                 <li v-for="description in item.description" v-html="description"></li>
               </ul>
-              <NuxtLink class="flex text-black items-center" href="#"><img class="mr-4" src="./assets/img/arrow.svg">Coming soon</NuxtLink>
+              <NuxtLink class="flex text-black items-center" href="#"><img class="mr-4" src="~/assets/img/arrow.svg">Coming soon</NuxtLink>
             </accordion-panel>
           </li>
         </ul>
@@ -75,37 +75,19 @@
         <h2 class="bg-primary w-auto text-center text-black font-bold rounded-lg text-4xl p-1 mb-4 md:mb-12 lg:text-6xl">Обо мне</h2>
         <div class="w-full p-8 bg-white shadow-regular mb-5 rounded-3xl text-black">
           <div class="flex pb-4 border-black border-b mb-4">
-            <img src="./assets/img/avatar.png">
+            <img src="~/assets/img/avatar.png">
             <div class="px-2">
               <h4 class="text-lg">Константин Крашеница</h4>
               <p class="text-s">Founder</p>
             </div>
-            <a class="ml-auto shrink-0" href="linkedin.com"><img src="./assets/img/linkedin.png"></a>
+            <a class="ml-auto shrink-0" href="linkedin.com"><img src="~/assets/img/linkedin.png"></a>
           </div>
           <p>10+ опыта в создании и развитии платежных систем, биржевых брокеров, банковских приложений как со стороны системного и технического анализа, так и со стороны продуктовой аналитики.</p>
         </div>
       </section>
     </main>
   </div>
-  <div class="bg-[#14151B]">
-    <footer class="p-5 flex flex-col wrapper">
-      <div class="flex flex-col items-center md:flex-row">
-        <img class="w-[116px] mb-5" src="./assets/img/logo.svg">
-        <form class="flex flex-col bg-secondary w-full p-8 mb-4 rounded-2xl md:w-[600px] md:ml-auto md:flex-row">
-          <input type="email" required placeholder="Email" class="bg-transparent px-4 py-4 border border-white rounded-2xl mb-4 md:mb-0 md:mr-6 md:flex-grow">
-          <button class="w-full text-center text-black text-base rounded-2xl px-4 py-2 bg-primary border border-black shadow-regular md:w-auto" type="submit">Subscribe to news</button>
-        </form>
-      </div>
-      <div class="flex flex-col border-white border-t py-5 items-center md:flex-row-reverse">
-        <ul class="flex mb-4 md:mb-0">
-          <li class="mr-4"><a href="linkedin.com"><img src="./assets/img/linkedin-white.svg"></a></li>
-          <li class="mr-4"><a href="facebook.com"><img src="./assets/img/facebook.svg"></a></li>
-          <li><a href="twitter.com"><img src="./assets/img/twitter.svg"></a></li>
-        </ul>
-        <div class="w-full text-center md:w-auto md:mr-auto"><p>© 2023 Positivus. All Rights Reserved.</p></div>
-      </div>
-    </footer>
-  </div>
+  <footer-component></footer-component>
 </template>
 
 <script setup lang="ts">
@@ -113,13 +95,13 @@
   import 'swiper/css';
 
   const lessons = [
-    {title: 'Дизайн FX Rate сервиса', link: ''},
-    {title: 'Дизайн Limiter для финансовых операций', link: ''},
-    {title: 'Дизайн Proximity сервиса для банкоматов', link: ''},
-    {title: 'Дизайн Account с двойной записью', link: ''},
-    {title: 'Дизайн сервиса комиссий', link: ''},
-    {title: 'Дизайн фондовой биржи', link: ''},
-    {title: 'Дизайн сервиса нотификаций', link: ''}
+    {title: 'Дизайн FX Rate сервиса', link: 'lessons'},
+    {title: 'Дизайн Limiter для финансовых операций', link: 'lessons'},
+    {title: 'Дизайн Proximity сервиса для банкоматов', link: 'lessons'},
+    {title: 'Дизайн Account с двойной записью', link: 'lessons'},
+    {title: 'Дизайн сервиса комиссий', link: 'lessons'},
+    {title: 'Дизайн фондовой биржи', link: 'lessons'},
+    {title: 'Дизайн сервиса нотификаций', link: 'lessons'}
   ];
 
   const accordion = [
