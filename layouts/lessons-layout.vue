@@ -2,7 +2,7 @@
   <div class="flex flex-col min-h-screen">
     <div class="wrapper w-full">
       <header class="p-6 flex justify-between w-full box-border md:items-center">
-        <NuxtLink to="/">
+        <NuxtLink :to="localePath('/')">
           <img src="~/assets/img/logo.svg">
         </NuxtLink>
         <button class="navbar-burger flex items-center text-white w-[40px] h-[40px] lg:hidden">
@@ -21,7 +21,7 @@
             <h3 class="font-bold text-lg mb-2">{{ item.title }}</h3>
             <ol>
               <li class="mb-2" v-for="(link, index) in item.links">
-                <NuxtLink :to="'/lessons' + link.link">{{ navOrderNumber(index) + '. ' + link.name }}</NuxtLink>
+                <NuxtLink :to="localePath('/lessons' + link.link)">{{ navOrderNumber(index) + '. ' + link.name }}</NuxtLink>
               </li>
             </ol>
           </li>
@@ -41,4 +41,6 @@
   function navOrderNumber(number: number) {
     return (number < 10) ? ("0" + number) : number;
   }
+
+  const localePath = useLocalePath();
 </script>

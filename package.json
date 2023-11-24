@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "latest",
+    "@nuxtjs/i18n": "^8.0.0-rc.5",
     "autoprefixer": "^10.4.16",
     "gh-pages": "^4.0.0",
     "nuxt": "^3.8.1",

@@ -14,7 +14,7 @@
           <li class="mr-4"><a href="facebook.com"><img src="../assets/img/facebook.svg"></a></li>
           <li><a href="twitter.com"><img src="../assets/img/twitter.svg"></a></li>
         </ul>
-        <div class="w-full text-center md:w-auto md:mr-auto"><p>© 2023 Positivus. All Rights Reserved.</p></div>
+        <div class="w-full text-center md:w-auto md:mr-auto"><p>{{ $t('copyright') }}</p></div>
       </div>
     </footer>
   </div>
